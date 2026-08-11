@@ -1,0 +1,325 @@
+/* ===== Relojoaria Guzzatti — identidade visual (Bootstrap + tokens) ===== */
+:root {
+  --gz-gold: #c9a227;
+  --gz-gold-soft: #e6c86a;
+  --gz-ink: #131313;
+  --gz-ink-2: #1e1c19;
+  --gz-cream: #faf7f1;
+  --gz-line: rgba(201, 162, 39, 0.35);
+  --gz-serif: "Cormorant Garamond", Georgia, serif;
+  --gz-sans: "Jost", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--gz-sans);
+  background-color: var(--gz-cream);
+  color: #23211d;
+}
+
+.gz-serif {
+  font-family: var(--gz-serif);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.gz-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gz-gold);
+  font-weight: 500;
+}
+
+.gz-lead {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Navbar */
+.gz-navbar {
+  background: rgba(19, 19, 19, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--gz-line);
+}
+.gz-brand-text {
+  font-family: var(--gz-serif);
+  font-size: 1.35rem;
+  color: var(--gz-cream);
+}
+.gz-brand-text strong {
+  color: var(--gz-gold-soft);
+}
+.gz-nav-link {
+  color: rgba(250, 247, 241, 0.8) !important;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+.gz-nav-link:hover,
+.gz-nav-link:focus {
+  color: var(--gz-gold-soft) !important;
+}
+.gz-navbar .navbar-toggler {
+  border-color: var(--gz-line);
+}
+.gz-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Buttons */
+.gz-btn-gold {
+  background: linear-gradient(135deg, var(--gz-gold), var(--gz-gold-soft));
+  border: none;
+  color: #1a1508;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.gz-btn-gold:hover {
+  filter: brightness(1.08);
+  color: #1a1508;
+}
+.gz-btn-outline {
+  border: 1px solid var(--gz-gold-soft);
+  color: var(--gz-cream);
+  background: transparent;
+  letter-spacing: 0.03em;
+}
+.gz-btn-outline:hover {
+  background: rgba(230, 200, 106, 0.14);
+  color: var(--gz-cream);
+}
+
+/* Hero */
+.gz-hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.gz-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gz-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.92) 10%, rgba(10, 10, 10, 0.55) 65%, rgba(10, 10, 10, 0.3));
+}
+.gz-hero-content {
+  position: relative;
+  color: var(--gz-cream);
+  padding-block: 5rem;
+  max-width: 720px;
+}
+.gz-hero-content em {
+  color: var(--gz-gold-soft);
+  font-style: italic;
+}
+
+/* Strip */
+.gz-strip {
+  background: var(--gz-ink-2);
+  color: var(--gz-cream);
+  font-size: 0.9rem;
+}
+.gz-strip i {
+  color: var(--gz-gold-soft);
+}
+
+/* Sections */
+.gz-section {
+  background: var(--gz-cream);
+}
+.gz-dark {
+  background: var(--gz-ink);
+  color: rgba(250, 247, 241, 0.85);
+}
+.gz-dark h2,
+.gz-dark strong {
+  color: var(--gz-cream);
+}
+
+/* Cards */
+.gz-card {
+  background: #fff;
+  border: 1px solid rgba(19, 19, 19, 0.07);
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.gz-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gz-line);
+  box-shadow: 0 18px 40px -22px rgba(19, 19, 19, 0.45);
+}
+.gz-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.18), rgba(230, 200, 106, 0.28));
+  color: var(--gz-gold);
+  font-size: 1.4rem;
+}
+.gz-mini-card {
+  background: #fff;
+  border: 1px solid rgba(19, 19, 19, 0.08);
+  border-left: 3px solid var(--gz-gold);
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+.gz-mini-icon {
+  color: var(--gz-gold);
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Stats */
+.gz-stat {
+  border: 1px solid var(--gz-line);
+  border-radius: 4px;
+  padding: 1.75rem 1rem;
+  text-align: center;
+}
+.gz-stat-num {
+  display: block;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--gz-gold-soft);
+}
+.gz-stat-label {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Quotes */
+.gz-quote {
+  background: #fff;
+  border: 1px solid rgba(19, 19, 19, 0.07);
+  border-radius: 4px;
+  padding: 1.75rem;
+  font-family: var(--gz-serif);
+  font-size: 1.05rem;
+}
+.gz-stars i {
+  color: var(--gz-gold);
+  font-size: 0.85rem;
+}
+
+/* Contact */
+.gz-contact-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(230, 200, 106, 0.2);
+}
+.gz-contact-list i {
+  color: var(--gz-gold-soft);
+  font-size: 1.15rem;
+  margin-top: 0.2rem;
+}
+.gz-contact-list a,
+.gz-footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
+.gz-contact-list a:hover,
+.gz-footer-links a:hover {
+  color: var(--gz-gold-soft);
+}
+.gz-map {
+  border: 1px solid var(--gz-line);
+}
+
+/* Inner pages */
+.gz-page-header {
+  background: var(--gz-ink);
+  color: var(--gz-cream);
+  border-bottom: 1px solid var(--gz-line);
+}
+.gz-doc h2 {
+  font-family: var(--gz-serif);
+  font-size: 1.6rem;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--gz-ink);
+}
+.gz-doc h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  background: var(--gz-gold);
+  margin-top: 0.5rem;
+}
+.gz-doc p,
+.gz-doc li {
+  line-height: 1.75;
+}
+.gz-doc a {
+  color: #8a6d12;
+}
+.gz-table thead th {
+  background: var(--gz-ink);
+  color: var(--gz-cream);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.gz-footer {
+  background: var(--gz-ink);
+  color: rgba(250, 247, 241, 0.72);
+}
+.gz-footer h5 {
+  color: var(--gz-cream);
+}
+.gz-footer-title {
+  color: var(--gz-gold-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.gz-footer-links li {
+  margin-bottom: 0.5rem;
+}
+.gz-hr {
+  border-color: rgba(230, 200, 106, 0.25);
+}
+
+.gz-btn-outline {
+  backdrop-filter: blur(2px);
+}
+
+/* Higher specificity than Bootstrap's .btn */
+.btn.gz-btn-gold {
+  background: linear-gradient(135deg, var(--gz-gold), var(--gz-gold-soft));
+  border: none;
+  color: #1a1508;
+}
+.btn.gz-btn-outline {
+  border: 1px solid var(--gz-gold-soft);
+  color: var(--gz-cream);
+  background: transparent;
+}
+.btn.gz-btn-outline:hover {
+  background: rgba(230, 200, 106, 0.16);
+  color: var(--gz-cream);
+}
+
+.btn.gz-btn-outline,
+a.btn.gz-btn-outline {
+  color: var(--gz-cream) !important;
+  border: 1px solid var(--gz-gold-soft) !important;
+}
