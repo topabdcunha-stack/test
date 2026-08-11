@@ -1,1 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relojoaria Guzzatti · Joalheria</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23b8860b'/%3E%3Ccircle cx='50' cy='50' r='35' fill='%23f5e6ca'/%3E%3Cpath d='M50 20 L55 38 L74 38 L59 49 L65 68 L50 57 L35 68 L41 49 L26 38 L45 38 Z' fill='%23b8860b'/%3E%3C/svg%3E" type="image/svg+xml" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #faf7f2;
+      color: #2e2a24;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .bg-gold {
+      background: #b8860b;
+    }
+    .text-gold {
+      color: #b8860b;
+    }
+    .border-gold {
+      border-color: #b8860b !important;
+    }
+    .btn-gold {
+      background: #b8860b;
+      color: #fff;
+      border: none;
+    }
+    .btn-gold:hover {
+      background: #9e7209;
+      color: #fff;
+    }
+    .hero {
+      background: linear-gradient(145deg, #f5ede3 0%, #e8dccc 100%);
+      border-bottom: 3px solid #b8860b;
+    }
+    .card-hover {
+      transition: all 0.2s ease;
+      border: 1px solid #e0d6c8;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(184, 134, 11, 0.12);
+      border-color: #b8860b;
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #b8860b;
+      border-radius: 4px;
+    }
+    .policy-card {
+      background: #fffcf8;
+      border-left: 4px solid #b8860b;
+      transition: transform 0.2s;
+    }
+    .policy-card:hover {
+      transform: translateY(-4px);
+    }
+    footer a {
+      color: #d4c5b0;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .social-icon {
+      font-size: 1.6rem;
+      color: #d4c5b0;
+      transition: color 0.2s;
+    }
+    .social-icon:hover {
+      color: #b8860b;
+    }
+    .info-box {
+      background: #fffcf8;
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+    .info-box i {
+      font-size: 2.2rem;
+      color: #b8860b;
+    }
+    hr.gold-divider {
+      height: 2px;
+      background: linear-gradient(90deg, #b8860b, #f5e6ca, #b8860b);
+      opacity: 0.5;
+      max-width: 180px;
+    }
+    .jewel-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #e8dccc;
+      transition: transform 0.2s;
+    }
+    .jewel-img:hover {
+      transform: scale(1.02);
+    }
+    .jewel-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #ede6dc;
+    }
+    @media (max-width: 576px) {
+      .info-box {
+        padding: 1.2rem;
+      }
+      .jewel-img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-gold shadow-sm">
+  <div class="container">
+    <a class="navbar-brand text-gold fw-bold" href="index.html">
+      <i class="bi bi-gem me-1"></i> Guzzatti
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Joias</a></li>
+        <li class="nav-item"><a class="nav-link" href="politica-privacidade.html">Privacidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="trocas-devolucoes.html">Trocas</a></li>
+        <li class="nav-item"><a class="nav-link" href="politica-envio.html">Envio</a></li>
+        <li class="nav-item"><a class="nav-link btn-gold text-white rounded-pill px-4 mx-2" href="#contato"><i class="bi bi-telephone-fill me-1"></i>Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero py-5">
+  <div class="container py-3">
+    <div class="row align-items-center g-4">
+      <div class="col-md-7">
+        <span class="badge bg-gold text-white mb-3 py-2 px-3"><i class="bi bi-star-fill me-1"></i> Desde 2001</span>
+        <h1 class="display-4 fw-bold text-dark">Joias & <span class="text-gold">Relógios</span> com tradição</h1>
+        <p class="lead text-secondary">Há mais de duas décadas oferecendo peças únicas e atendimento especializado em Criciúma.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#contato" class="btn btn-gold btn-lg rounded-pill px-5"><i class="bi bi-whatsapp me-2"></i>Fale conosco</a>
+          <a href="#galeria" class="btn btn-outline-dark btn-lg rounded-pill px-5">Ver joias</a>
+        </div>
+        <div class="mt-4 d-flex gap-4 flex-wrap">
+          <div><i class="bi bi-truck text-gold me-1"></i> <span class="fw-semibold">Envio rápido</span></div>
+          <div><i class="bi bi-arrow-repeat text-gold me-1"></i> <span class="fw-semibold">Trocas facilitadas</span></div>
+          <div><i class="bi bi-shield-check text-gold me-1"></i> <span class="fw-semibold">Segurança total</span></div>
+        </div>
+      </div>
+      <div class="col-md-5 text-center">
+        <div class="bg-white p-4 rounded-4 shadow-sm d-inline-block">
+          <i class="bi bi-clock-history" style="font-size: 4rem; color: #b8860b;"></i>
+          <h3 class="fw-bold mt-3">Relojoaria Guzzatti</h3>
+          <p class="text-muted mb-0"><i class="bi bi-geo-alt-fill text-gold"></i> Criciúma · SC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMAÇÕES DA EMPRESA -->
+<section class="container py-5">
+  <div class="row g-4 justify-content-center">
+    <div class="col-lg-10">
+      <div class="info-box row g-3 align-items-center">
+        <div class="col-md-4 text-center">
+          <i class="bi bi-building"></i>
+          <h5 class="fw-bold mt-2">CNPJ</h5>
+          <p class="text-muted mb-0">01.067.835/0001-21</p>
+          <small class="text-secondary">01067835000121</small>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-calendar-event"></i>
+          <h5 class="fw-bold mt-2">Situação Cadastral</h5>
+          <p class="text-muted mb-0">08/07/2001</p>
+          <span class="badge bg-success">Ativa</span>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-geo-alt"></i>
+          <h5 class="fw-bold mt-2">Endereço</h5>
+          <p class="text-muted mb-0">Av. Gabriel Zanette, 1455</p>
+          <p class="text-muted mb-0">Prospera · Criciúma/SC</p>
+          <p class="text-muted mb-0">88815-060</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÍCONES / DIFERENCIAIS -->
+<section class="container py-4">
+  <div class="row text-center g-4">
+    <div class="col-md-3 col-6">
+      <div class="card-hover card p-3 rounded-4 h-100 bg-white border-0 shadow-sm">
+        <i class="bi bi-gem" style="font-size: 2.8rem; color: #b8860b;"></i>
+        <h6 class="fw-bold mt-2">Joias refinadas</h6>
+        <p class="text-muted small">Peças exclusivas com design atemporal</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card-hover card p-3 rounded-4 h-100 bg-white border-0 shadow-sm">
+        <i class="bi bi-watch" style="font-size: 2.8rem; color: #b8860b;"></i>
+        <h6 class="fw-bold mt-2">Relógios premium</h6>
+        <p class="text-muted small">Precisão e sofisticação para todos os estilos</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card-hover card p-3 rounded-4 h-100 bg-white border-0 shadow-sm">
+        <i class="bi bi-hand-thumbs-up" style="font-size: 2.8rem; color: #b8860b;"></i>
+        <h6 class="fw-bold mt-2">Atendimento personalizado</h6>
+        <p class="text-muted small">Experiência única desde 2001</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-6">
+      <div class="card-hover card p-3 rounded-4 h-100 bg-white border-0 shadow-sm">
+        <i class="bi bi-award" style="font-size: 2.8rem; color: #b8860b;"></i>
+        <h6 class="fw-bold mt-2">Tradição & Confiança</h6>
+        <p class="text-muted small">Mais de 20 anos no mercado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA DE JOIAS -->
+<section id="galeria" class="container py-4">
+  <h2 class="section-title mb-4">Nossas Joias</h2>
+  <p class="text-secondary mb-4">Peças selecionadas com o brilho que você merece.</p>
+  <div class="row g-4">
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=300&fit=crop&crop=center&auto=format" alt="Anel de ouro com diamante" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Anel</span>
+          <p class="fw-semibold mt-1 mb-0">Ouro 18k · Diamante</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1611501278019-0e0d6de4a9b9?w=400&h=300&fit=crop&crop=center&auto=format" alt="Colar de pérolas" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Colar</span>
+          <p class="fw-semibold mt-1 mb-0">Pérolas naturais</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=300&fit=crop&crop=center&auto=format" alt="Relógio de luxo" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Relógio</span>
+          <p class="fw-semibold mt-1 mb-0">Cronógrafo · Aço</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1633174524828-9606baee0d2c?w=400&h=300&fit=crop&crop=center&auto=format" alt="Brinco de ouro" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Brinco</span>
+          <p class="fw-semibold mt-1 mb-0">Ouro 18k · Folheados</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&h=300&fit=crop&crop=center&auto=format" alt="Pulseira com pedras" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Pulseira</span>
+          <p class="fw-semibold mt-1 mb-0">Pedras naturais</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="jewel-card p-2">
+        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=300&fit=crop&crop=center&auto=format" alt="Anel de noivado" class="jewel-img" loading="lazy" />
+        <div class="p-2 text-center">
+          <span class="badge bg-gold text-white">Anel</span>
+          <p class="fw-semibold mt-1 mb-0">Noivado · Safira</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE + CONTATO -->
+<section id="sobre" class="container py-5">
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <h2 class="section-title mb-4">Sobre a Guzzatti</h2>
+      <p class="text-secondary">A <strong>Relojoaria Guzzatti LTDA</strong> é referência em joias e relógios na região sul de Santa Catarina. Fundada em <strong>08 de julho de 2001</strong>, construímos uma trajetória baseada em qualidade, ética e paixão pelo que fazemos.</p>
+      <p class="text-secondary">Nosso showroom na Avenida Gabriel Zanette, 1455, no bairro Prospera, é um espaço acolhedor onde cada peça conta uma história. Trabalhamos com marcas consolidadas e também com criações autorais.</p>
+      <div class="d-flex gap-3 mt-4 flex-wrap">
+        <span class="badge bg-gold text-white p-2"><i class="bi bi-check-circle-fill"></i> Loja física</span>
+        <span class="badge bg-gold text-white p-2"><i class="bi bi-check-circle-fill"></i> Venda online</span>
+        <span class="badge bg-gold text-white p-2"><i class="bi bi-check-circle-fill"></i> Assistência técnica</span>
+      </div>
+      <a href="sobre.html" class="btn btn-gold mt-3 rounded-pill px-4">Saiba mais <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div id="contato" class="col-lg-6">
+      <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center">
+        <h4 class="fw-bold"><i class="bi bi-headset text-gold me-2"></i>Fale com a gente</h4>
+        <p class="text-muted">Estamos prontos para atender você pessoalmente ou por telefone.</p>
+        <div class="d-flex align-items-center gap-3 bg-light p-3 rounded-3">
+          <i class="bi bi-telephone-fill text-gold" style="font-size: 2rem;"></i>
+          <div>
+            <span class="fw-semibold">(48) 3431-8006</span><br />
+            <small class="text-secondary">Seg–Sex 9h–18h · Sáb 9h–13h</small>
+          </div>
+        </div>
+        <div class="mt-3">
+          <a href="#" class="btn btn-outline-gold rounded-pill px-4 border-gold text-gold"><i class="bi bi-envelope me-1"></i> Enviar mensagem</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLÍTICAS (cards com links) -->
+<section class="container py-4">
+  <div class="row g-4">
+    <div class="col-md-3">
+      <a href="politica-privacidade.html" class="text-decoration-none">
+        <div class="policy-card card h-100 border-0 shadow-sm p-4">
+          <h5 class="fw-bold text-gold"><i class="bi bi-shield-lock me-2"></i>Privacidade</h5>
+          <p class="text-secondary small">Saiba como protegemos seus dados.</p>
+          <span class="text-gold fw-semibold">Leia mais <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="trocas-devolucoes.html" class="text-decoration-none">
+        <div class="policy-card card h-100 border-0 shadow-sm p-4">
+          <h5 class="fw-bold text-gold"><i class="bi bi-arrow-left-right me-2"></i>Trocas</h5>
+          <p class="text-secondary small">Entenda nossa política de trocas.</p>
+          <span class="text-gold fw-semibold">Saiba mais <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="politica-envio.html" class="text-decoration-none">
+        <div class="policy-card card h-100 border-0 shadow-sm p-4">
+          <h5 class="fw-bold text-gold"><i class="bi bi-box-seam me-2"></i>Envio</h5>
+          <p class="text-secondary small">Prazos e condições de entrega.</p>
+          <span class="text-gold fw-semibold">Ver prazos <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="sobre.html" class="text-decoration-none">
+        <div class="policy-card card h-100 border-0 shadow-sm p-4">
+          <h5 class="fw-bold text-gold"><i class="bi bi-building me-2"></i>Sobre</h5>
+          <p class="text-secondary small">Conheça nossa história.</p>
+          <span class="text-gold fw-semibold">Conheça <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FRASE -->
+<div class="container my-4 text-center">
+  <hr class="gold-divider mx-auto" />
+  <p class="fs-5 fst-italic text-secondary px-3">“Tradição em joias, precisão em relógios, paixão em cada detalhe.”</p>
+  <hr class="gold-divider mx-auto" />
+</div>
+
+<!-- RODAPÉ -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold text-gold"><i class="bi bi-gem me-1"></i> Relojoaria Guzzatti</h5>
+        <p class="text-secondary small">CNPJ: 01.067.835/0001-21<br />
+        Av. Gabriel Zanette, 1455 · Prospera<br />
+        Criciúma - SC · 88815-060</p>
+        <p><i class="bi bi-telephone text-gold"></i> (48) 3431-8006</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <h6 class="text-gold">Institucional</h6>
+        <ul class="list-unstyled">
+          <li><a href="sobre.html" class="text-secondary small">Sobre</a></li>
+          <li><a href="politica-privacidade.html" class="text-secondary small">Privacidade</a></li>
+          <li><a href="trocas-devolucoes.html" class="text-secondary small">Trocas</a></li>
+          <li><a href="politica-envio.html" class="text-secondary small">Envio</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-gold">Horário</h6>
+        <p class="text-secondary small mb-0">Seg–Sex: 9h – 18h</p>
+        <p class="text-secondary small">Sábado: 9h – 13h</p>
+        <p class="text-secondary small"><i class="bi bi-geo-alt-fill text-gold"></i> Estacionamento fácil</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-gold">Atendimento</h6>
+        <p class="text-secondary small"><i class="bi bi-envelope"></i> contato@guzzatti.com.br</p>
+        <p class="text-secondary small"><i class="bi bi-headset"></i> (48) 3431-8006</p>
+        <span class="badge bg-gold text-dark">Desde 2001</span>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4" />
+    <div class="text-center text-secondary small">
+      &copy; 2026 Relojoaria Guzzatti LTDA · Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
